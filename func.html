@@ -1,0 +1,85 @@
+<html>
+	<head>
+		<title>function</title>
+	</head>
+	<body>
+		<input type="number" id="a"><br><br>
+		<input type="number" id="b"><br><br>
+		<button onclick="add()">ADD</button>
+		<p id="result1"></p>
+		<input type="number" id="c"><br><br>
+		<input type="number" id="d"><br><br>
+		<button onclick="sub()">SUBRACT</button>
+		<p id="result2"></p>
+		<input type="number" id="e"><br><br>
+		<input type="number" id="f"><br><br>
+		<button onclick="mul()">MULTIPLY</button>
+		<p id="result3"></p>
+		<input type="number" id="x"><br><br>
+		<input type="number" id="y"><br><br>
+		<button onclick="div()">DIVIDE</button>
+		<p id="result4"></p>
+		<script>
+			/*calculator*/
+			function add(){
+				a=Number(document.getElementById("a").value)
+				b=Number(document.getElementById("b").value)
+				document.getElementById("result1").innerHTML=a+b
+			}
+			function sub(){
+				a=Number(document.getElementById("c").value)
+				b=Number(document.getElementById("d").value)
+				document.getElementById("result2").innerHTML=a-b
+			}
+			function mul(){
+				a=Number(document.getElementById("e").value)
+				b=Number(document.getElementById("f").value)
+				document.getElementById("result3").innerHTML=a*b
+			}
+			function div(){
+				a=Number(document.getElementById("x").value)
+				b=Number(document.getElementById("y").value)
+				document.getElementById("result4").innerHTML=a/b
+			}
+		
+		
+			/*2,purchase discount amount*/
+			function purchase(){
+				var amt
+				var discount
+				amt = prompt("Enter purchase amount:")
+				amt = Number(amt)
+				if(amt<1000){
+					document.write("No Discount")
+					
+				}
+				else if(amt>1000 && amt<5000){
+					discount=amt-(amt*0.05)
+					document.write("5% discount"+"<br>"+discount)
+				
+				}
+				else if(amt>5001 && amt<10000){
+					discount=amt-(amt*0.1)
+					document.write("10% discount"+"<br>"+discount)
+				
+				}
+				else if(amt>10000){
+					discount=amt-(amt*0.15)
+					document.write("15% discount"+"<br>"+discount)
+				
+				}
+				
+			}
+			purchase()
+			
+			
+			
+			
+			
+			
+			
+			
+		</script>
+	
+	</body>
+</html>
